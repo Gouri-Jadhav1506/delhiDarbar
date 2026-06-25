@@ -785,7 +785,7 @@ export default function AdminPage() {
                     <option value="/assets/images/spicenbliss/earrings_2.jpg">Celestial Moonstone (Earrings)</option>
                     <option value="/assets/images/spicenbliss/anklet_1.jpg">Zanzibar Spice (Anklet)</option>
                     <option value="/assets/images/spicenbliss/choker_1.jpg">Harmony Choker (Pearl)</option>
-                    <option value="/assets/images/spicenbliss/ring_1.jpg">Sunset Ring (Carnelian)</option>
+                    <option value="/assets/images/spicenbliss/ring_1.png">Oxidized Statement Ring (Ring)</option>
                   </select>
                 </div>
               </div>

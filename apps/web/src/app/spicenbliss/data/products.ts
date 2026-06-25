@@ -116,19 +116,19 @@ export const products: Product[] = [
   },
   {
     id: "7",
-    name: "Terracotta Sunset Ring",
+    name: "Oxidized Statement Ring",
     price: 65,
     category: "Accessories",
-    image: "/assets/images/spicenbliss/ring_1.jpg",
+    image: "/assets/images/spicenbliss/ring_1.png",
     rating: 4.9,
     reviews: 42,
-    desc: "An organic-style statement ring set with a smooth, hand-polished carnelian cabochon in a sterling silver setting.",
-    materials: "925 Sterling Silver, Natural Carnelian Cabochon.",
+    desc: "An oxidized silver-tone adjustable statement ring featuring intricate elephant and peacock motifs, embellished with floral detailing, white bead accents, and colored stones for a traditional ethnic look.",
+    materials: "Oxidized Silver-tone Metal, Colored Stones, White Bead Accents.",
     details: [
-      "Available in standard sizes 6, 7, and 8",
-      "Sleek bezel setting that highlights the stone's color",
-      "Ethically sourced stone materials",
-      "Designed to stack or be worn as a statement piece"
+      "Adjustable design fits most ring sizes comfortably",
+      "Intricate traditional elephant and peacock motifs",
+      "Embellished with floral detailing and white bead accents",
+      "A stunning fashion accessory for a traditional ethnic look"
     ]
   }
 ];
