@@ -81,7 +81,37 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const savedProducts = localStorage.getItem("spicenbliss_products");
     if (savedProducts) {
       try {
-        setProductsState(JSON.parse(savedProducts));
+        const parsed = JSON.parse(savedProducts) as Product[];
+        const synced = parsed.map(savedP => {
+          const defaultP = products.find(p => p.id === savedP.id);
+          if (defaultP) {
+            if (
+              savedP.name !== defaultP.name ||
+              savedP.image !== defaultP.image ||
+              savedP.desc !== defaultP.desc
+            ) {
+              return {
+                ...savedP,
+                name: defaultP.name,
+                image: defaultP.image,
+                desc: defaultP.desc,
+                materials: defaultP.materials,
+                details: defaultP.details
+              };
+            }
+          }
+          return savedP;
+        });
+
+        // Add any missing default products
+        products.forEach(defaultP => {
+          if (!synced.some(p => p.id === defaultP.id)) {
+            synced.push(defaultP);
+          }
+        });
+
+        setProductsState(synced);
+        localStorage.setItem("spicenbliss_products", JSON.stringify(synced));
       } catch (e) {
         console.error("Error parsing products storage:", e);
         setProductsState(products);

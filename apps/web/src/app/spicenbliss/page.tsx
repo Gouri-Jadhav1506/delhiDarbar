@@ -20,7 +20,7 @@ export default function SpiceHomePage() {
     {
       name: "Jean-Pierre D.",
       role: "Gifting Client",
-      text: "Bought the Nirvana Lotus Earrings for my wife. The craftsmanship is flawless, and the sterling silver is incredibly high quality. Courier arrived in 2 days.",
+      text: "Bought the Ethnic Pink Stone Oxidized Earrings for my wife. The craftsmanship is flawless, and the detailing is incredibly high quality. Courier arrived in 2 days.",
       stars: 5,
     },
   ];
