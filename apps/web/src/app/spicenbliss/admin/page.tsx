@@ -780,7 +780,7 @@ export default function AdminPage() {
                     className="w-full rounded-xl border border-white/10 bg-[#1B3030] px-4 py-2.5 text-xs text-white focus:outline-none focus:border-[#FFD84D]"
                   >
                     <option value="/assets/images/spicenbliss/bracelet_1.jpg">Elysian Amber (Bracelet)</option>
-                    <option value="/assets/images/spicenbliss/earrings_1.jpg">Nirvana Lotus (Earrings)</option>
+                    <option value="/assets/images/spicenbliss/earrings_1.png">Ethnic Pink Stone Oxidized (Earrings)</option>
                     <option value="/assets/images/spicenbliss/cuff_1.jpg">Solaris Aura (Cuff)</option>
                     <option value="/assets/images/spicenbliss/earrings_2.jpg">Celestial Moonstone (Earrings)</option>
                     <option value="/assets/images/spicenbliss/anklet_1.jpg">Zanzibar Spice (Anklet)</option>

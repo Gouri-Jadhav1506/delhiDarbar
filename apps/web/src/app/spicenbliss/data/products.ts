@@ -31,19 +31,19 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Nirvana Lotus Earrings",
+    name: "Ethnic Pink Stone Oxidized Earrings",
     price: 85,
     category: "Earrings",
-    image: "/assets/images/spicenbliss/earrings_1.jpg",
+    image: "/assets/images/spicenbliss/earrings_1.png",
     rating: 4.9,
     reviews: 18,
-    desc: "Exquisite drop earrings shaped like blooming lotus petals, featuring premium sterling silver and glowing jade drops.",
-    materials: "925 Sterling Silver, Grade A Natural Green Jade.",
+    desc: "A pair of oxidized silver-tone ethnic earrings featuring a pink stone centerpiece, intricate sunburst detailing, and dangling white pearl beads.",
+    materials: "Oxidized Silver-tone Metal, Pink Stone Centerpiece, White Pearl Beads.",
     details: [
-      "Intricately carved lotus filigree details",
-      "Hypoallergenic sterling silver ear hooks",
-      "Drop length: 1.5 inches",
-      "Natural jade stones with unique color variations"
+      "Pair of oxidized silver-tone ethnic earrings",
+      "Pink stone centerpiece with intricate sunburst detailing",
+      "Dangling white pearl beads",
+      "Perfect for ethnic wear and special occasions"
     ]
   },
   {
