@@ -146,7 +146,7 @@ export default function ProductDetailClient({ id }: ProductDetailClientProps) {
                 onClick={() => addToCart(product, quantity)}
                 className="flex-1 rounded-full bg-[#FFD84D] hover:bg-[#ffe073] text-[#102B2A] font-bold font-jost text-sm uppercase tracking-wider py-4 px-8 transition-all duration-300 hover:scale-[1.01] shadow-xl shadow-[#FFD84D]/10"
               >
-                Add to Shopping Bag
+                Add to Quote Request
               </button>
             </div>
 

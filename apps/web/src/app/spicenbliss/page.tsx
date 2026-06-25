@@ -105,7 +105,7 @@ export default function SpiceHomePage() {
                     onClick={() => products[0] && addToCart(products[0])}
                     className="inline-block font-jost text-[10px] uppercase tracking-wider font-semibold border border-[#FFD84D] text-[#FFD84D] hover:bg-[#FFD84D] hover:text-[#102B2A] rounded-full px-4 py-1.5 transition-all duration-300"
                   >
-                    Quick Add
+                    Add to Quote
                   </button>
                 </div>
               </div>
@@ -285,13 +285,12 @@ export default function SpiceHomePage() {
                 </div>
               </div>
 
-              {/* Cart CTA (Price removed) */}
               <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-center">
                 <button
                   onClick={() => addToCart(product)}
                   className="w-full rounded-full bg-white/5 hover:bg-[#FFD84D] border border-white/10 hover:border-[#FFD84D] hover:text-[#102B2A] text-white px-5 py-2 text-xs font-semibold font-jost uppercase tracking-wider transition-all duration-300"
                 >
-                  Add to Cart
+                  Add to Quote
                 </button>
               </div>
             </div>

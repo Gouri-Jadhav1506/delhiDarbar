@@ -18,9 +18,9 @@ export default function CartPage() {
           <FaShoppingCart className="w-10 h-10" />
         </div>
         <div className="space-y-2 max-w-sm">
-          <h1 className="font-plus-jakarta-sans text-2xl font-bold text-white">Your Cart is Empty</h1>
+          <h1 className="font-plus-jakarta-sans text-2xl font-bold text-white">Your Quote List is Empty</h1>
           <p className="font-jost text-white/50 text-sm">
-            You currently have no accessories in your shopping cart bag. Browse the collections to add items.
+            You currently have no accessories in your quotation request. Browse the collections to add items.
           </p>
         </div>
         <Link
@@ -37,9 +37,9 @@ export default function CartPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 space-y-12">
       {/* Title */}
       <div className="text-left space-y-2">
-        <h1 className="font-plus-jakarta-sans text-3xl font-bold text-white tracking-tight">Your Shopping Bag</h1>
+        <h1 className="font-plus-jakarta-sans text-3xl font-bold text-white tracking-tight">Your Quote Request</h1>
         <p className="font-jost text-white/50 text-xs uppercase tracking-wider">
-          Review items in your order bag prior to proceeding
+          Review items in your quote list prior to proceeding
         </p>
       </div>
 
@@ -160,7 +160,7 @@ export default function CartPage() {
           <div className="absolute top-0 right-0 w-36 h-36 bg-[#FFD84D]/5 rounded-full blur-[70px] pointer-events-none" />
 
           <h3 className="font-plus-jakarta-sans font-semibold text-white text-lg pb-4 border-b border-white/5">
-            Order Details
+            Quote Details
           </h3>
 
           <div className="space-y-3 font-jost text-sm text-white/70">
@@ -173,7 +173,7 @@ export default function CartPage() {
             href="/spicenbliss/checkout"
             className="group flex items-center justify-center gap-3 w-full rounded-full bg-[#FFD84D] hover:bg-[#ffe073] text-[#102B2A] font-bold font-jost text-sm uppercase tracking-wider py-4 transition-all duration-300 hover:scale-[1.01]"
           >
-            Proceed to Setup Order
+            Proceed to Request Quote
             <FaArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
           </Link>
 
