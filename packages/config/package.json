@@ -1,0 +1,15 @@
+{
+  "name": "@delhidarbar/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./tailwind.config.js",
+  "exports": {
+    "./tailwind": "./tailwind.config.js"
+  },
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.11"
+  }
+}

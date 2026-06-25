@@ -1,0 +1,173 @@
+# Deployment Plan: Delhi Darbar Group → Production
+
+**Domain:** `delhidarbargroup.com`  
+**Frontend:** Next.js (static export) → **Vercel**  
+**Backend:** WordPress CMS → **Hostinger**  
+**Repo:** [github.com/krrishcode/delhidarbargroup](https://github.com/krrishcode/delhidarbargroup) (private)
+
+---
+
+## ✅ Completed Steps
+
+### Step 1: Git Repository Setup — DONE ✅
+- Initialized fresh git repo in the monorepo directory
+- Removed problematic `CON` file (Windows reserved name)
+- Removed empty API route (`apps/web/src/app/api/`) that would break `output: 'export'`
+- Added `*.mp4` to `.gitignore` (129 MB video exceeded GitHub's 100 MB limit)
+- Pushed to `https://github.com/krrishcode/delhidarbargroup.git` on `main` branch
+
+### Step 2: Build Verification — DONE ✅
+- Local build passed successfully with `npx turbo run build --filter=@delhidarbar/web`
+- All 12 static pages generated (including `/`, `/skyline`, `/skyline/about-us`, `/skyline/gallery`, etc.)
+
+> [!WARNING]
+> **Video file (`Intro.mp4`)** was excluded from git. You'll need to host it externally (e.g., on Hostinger file manager, Cloudflare R2, or a CDN) and update the video `src` URL in the component that uses it.
+
+---
+
+## Remaining Steps — Deploy to Production
+
+### Step 3: Create Vercel Project & Import Repo
+
+1. Go to **[vercel.com](https://vercel.com)** → Sign up / Log in
+2. Click **"Add New Project"**
+3. Click **"Import Git Repository"**
+4. Authorize Vercel to access your GitHub account (`krrishcode`)
+5. Select the repo: **`krrishcode/delhidarbargroup`**
+
+---
+
+### Step 4: Configure Vercel Monorepo Settings
+
+> [!IMPORTANT]
+> This is the most critical step. Since this is a Turborepo monorepo, Vercel needs to know where the web app lives.
+
+| Setting | Value |
+|---|---|
+| **Framework Preset** | Next.js |
+| **Root Directory** | `apps/web` |
+| **Build Command** | `cd ../.. && npx turbo run build --filter=@delhidarbar/web` |
+| **Output Directory** | `out` |
+| **Install Command** | `cd ../.. && npm install` |
+| **Node.js Version** | 18.x or 20.x |
+
+---
+
+### Step 5: Set Environment Variables in Vercel
+
+Go to **Project Settings → Environment Variables** and add:
+
+| Key | Value | Environments |
+|---|---|---|
+| `NEXT_PUBLIC_WORDPRESS_URL` | `https://api.delhidarbargroup.com` | Production, Preview |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | `2250575413751` | Production, Preview |
+
+---
+
+### Step 6: Deploy & Test Preview URL
+
+1. Click **"Deploy"** 
+2. Wait for build to complete
+3. Test the preview URL (e.g., `delhidarbargroup-xyz.vercel.app`)
+4. Verify all pages work: Home, Skyline, About, Gallery, Menu, Contact, Services
+
+---
+
+### Step 7: Connect Domain `delhidarbargroup.com` to Vercel
+
+1. In Vercel → **Project Settings → Domains**
+2. Add: `delhidarbargroup.com`
+3. Add: `www.delhidarbargroup.com`
+4. Vercel provides these DNS records:
+
+| Type | Name | Value |
+|---|---|---|
+| **A** | `@` | `76.76.21.21` |
+| **CNAME** | `www` | `cname.vercel-dns.com` |
+
+---
+
+### Step 8: Configure WordPress Subdomain on Hostinger — DONE ✅
+
+Your WordPress API is currently at: `https://api.delhidarbargroup.com`
+
+**Recommended:** Set up `api.delhidarbargroup.com` or `blog.delhidarbargroup.com` as a clean subdomain.
+
+1. Hostinger **hPanel → Domains → Subdomains** → Create `api.delhidarbargroup.com`
+2. Point it to the WordPress installation 
+3. Update WordPress **Settings → General**:
+   - WordPress Address: `https://api.delhidarbargroup.com`
+   - Site Address: `https://api.delhidarbargroup.com`
+4. Enable SSL for the subdomain
+
+---
+
+### Step 9: Configure DNS Records
+
+> [!CAUTION]
+> Do this AFTER verifying Vercel deployment works on the preview URL. Changing DNS will redirect your domain away from any current site.
+
+At your domain registrar (likely Hostinger if that's where you registered `delhidarbargroup.com`):
+
+| Type | Name | Value | Purpose |
+|---|---|---|---|
+| **A** | `@` | `76.76.21.21` | Main site → Vercel |
+| **CNAME** | `www` | `cname.vercel-dns.com` | www → Vercel |
+| **A/CNAME** | `api` | *(Hostinger IP)* | WordPress backend |
+
+**If domain is at Hostinger:**
+1. hPanel → **Domains → DNS Zone**
+2. **Delete** existing A record for `@` pointing to Hostinger
+3. **Add** A record: `@` → `76.76.21.21`
+4. **Add** CNAME: `www` → `cname.vercel-dns.com`
+
+---
+
+### Step 10: Post-Deployment
+
+1. **Update `NEXT_PUBLIC_WORDPRESS_URL`** in Vercel env vars to `https://api.delhidarbargroup.com`
+2. **Redeploy** from Vercel dashboard
+3. **Optional:** Set up Deploy Hooks for auto-redeploy when WordPress content changes
+
+---
+
+## Verification Checklist
+
+| # | Check | Status |
+|---|---|---|
+| 1 | Code pushed to GitHub | ✅ |
+| 2 | Local build passes | ✅ |
+| 3 | Vercel project created | ⬜ |
+| 4 | Preview URL works | ⬜ |
+| 5 | `delhidarbargroup.com` resolves | ⬜ |
+| 6 | SSL active on domain | ⬜ |
+| 7 | WordPress API domain mapped (`api.`) | ✅ |
+| 8 | All pages load correctly | ⬜ |
+
+---
+
+## Execution Flow
+
+```mermaid
+graph TD
+    A["1. Push to GitHub ✅"] --> B["2. Build Verified ✅"]
+    B --> C["3. Create Vercel Project"]
+    C --> D["4. Configure Monorepo Settings"]
+    D --> E["5. Set Env Variables"]
+    E --> F["6. Deploy & Test Preview"]
+    F --> G["7. Add Domain to Vercel"]
+    G --> H["8. WordPress Subdomain"]
+    H --> I["9. Configure DNS"]
+    I --> J["10. Final Verification"]
+    
+    style A fill:#065f46,stroke:#10b981,color:#fff
+    style B fill:#065f46,stroke:#10b981,color:#fff
+    style C fill:#1e1b4b,stroke:#818cf8,color:#fff
+    style D fill:#1e1b4b,stroke:#818cf8,color:#fff
+    style E fill:#1e1b4b,stroke:#818cf8,color:#fff
+    style F fill:#1e1b4b,stroke:#818cf8,color:#fff
+    style G fill:#7c2d12,stroke:#f97316,color:#fff
+    style H fill:#7c2d12,stroke:#f97316,color:#fff
+    style I fill:#7c2d12,stroke:#f97316,color:#fff
+    style J fill:#1a1a2e,stroke:#00ff88,color:#fff
+```
