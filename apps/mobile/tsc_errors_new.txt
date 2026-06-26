@@ -1,0 +1,1 @@
+components/LoginModal.tsx(20,3): error TS2614: Module '"react-native-reanimated"' has no exported member 'SlideInBottom'. Did you mean to use 'import SlideInBottom from "react-native-reanimated"' instead?

@@ -1,0 +1,342 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "home": "Accueil",
+    "continue": "Continuer",
+    "back": "Retour",
+    "see_all": "Voir tout",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "skip": "Ignorer pour l'instant",
+    "ok": "OK",
+    "reservations": "Booking",
+    "scan_qr": "Scanner QR",
+    "choose_ambience": "Choisissez Votre Atmosphère"
+  },
+  "splash": {
+    "loading": "Chargement...",
+    "brand_name": "DELHI DARBAR",
+    "tagline": "DÉGUSTEZ. SAVOUREZ. CÉLÉBREZ."
+  },
+  "language_selection": {
+    "title": "Choisir la langue",
+    "subtitle": "Sélectionnez votre langue préférée",
+    "english": "Anglais",
+    "french": "Français"
+  },
+  "home": {
+    "welcome": "Découvrez le meilleur de",
+    "brand": "Skyline",
+    "explore_menu": "EXPLORER NOTRE CARTE",
+    "categories": "Catégories",
+    "featured_venues": "Lieux en vedette",
+    "trending_items": "Articles tendance",
+    "upcoming_events": "Événements à venir"
+  },
+  "menu": {
+    "title": "Menu",
+    "subtitle": "Sélection de délices premium",
+    "search_placeholder": "Rechercher des cocktails, entrées...",
+    "add_to_cart": "AJOUTER AU PANIER",
+    "view_cart": "VOIR LE PANIER",
+    "items_selected": "Articles sélectionnés",
+    "item": {
+      "add": "AJOUTER",
+      "view_order": "VOIR MA COMMANDE"
+    },
+    "filters": {
+      "veg_only": "Végé",
+      "non_veg": "Viande",
+      "halal": "Halal",
+      "vegan": "Végan",
+      "gluten_free": "Sans Gluten",
+      "dairy_free": "Sans Produit Laitier",
+      "nut_free": "Sans Noix",
+      "popular": "Populaire",
+      "price": "Prix",
+      "clear_all": "Tout effacer",
+      "spice": {
+        "mild": "Doux",
+        "medium": "Moyen",
+        "spicy": "Épicé"
+      },
+      "cuisine": {
+        "mughlai": "Mughlai",
+        "north_indian": "Indien du Nord",
+        "tandoori": "Tandoori",
+        "biryani": "Biryani"
+      }
+    },
+    "categories": {
+      "food": "Nourriture",
+      "drink": "Boissons",
+      "combo": "Combos"
+    },
+    "sections": {
+      "starters": "Entrées Tandoori Signature",
+      "main_course": "Plat Principal Mughlai Authentique",
+      "biryani_n_rice": "Biryanis Dum Célèbres",
+      "breads": "Pains Indiens Artisanaux",
+      "desserts": "Douceurs Indiennes Traditionnelles",
+      "entrees_tandoori_signature": "Entrées Tandoori Signature",
+      "plat_principal_mughlai_authentique": "Plat Principal Mughlai Authentique",
+      "biryanis_dum_celebres": "Biryanis Dum Célèbres",
+      "pains_indiens_artisanaux": "Pains Indiens Artisanaux",
+      "douceurs_indiennes_traditionnelles": "Douceurs Indiennes Traditionnelles"
+    },
+    "tags": {
+      "popular": "Populaire",
+      "new": "Nouveau",
+      "trending": "Tendance",
+      "bestseller": "Best-seller",
+      "chef_choice": "Le Choix du Chef",
+      "special": "Spécial",
+      "signature": "Signature"
+    },
+    "detail": {
+      "ingredients": "La Composition",
+      "about": "Le Récit du Chef",
+      "watch_video": "Histoire Visuelle",
+      "add_to_order": "AJOUTER À LA COMMANDE"
+    }
+  },
+  "events": {
+    "title": "Événements",
+    "subtitle": "Découvrez les soirées les plus chaudes",
+    "rsvp_button": "RSVP POUR L'ENTRÉE",
+    "headlining": "EN VEDETTE",
+    "about_event": "À propos de l'événement",
+    "highlights": "Points forts",
+    "add_to_calendar": "Ajouter au calendrier",
+    "confirm_whatsapp": "CONFIRMER VIA WHATSAPP",
+    "rsvp_whatsapp": "RSVP VIA WHATSAPP",
+    "booking_summary": "RÉSUMÉ DE LA RÉSERVATION",
+    "confirm_entry": "Confirmez votre entrée",
+    "max_guests": "Max 10 invités",
+    "calendar_alert_description": "L'événement \"{{title}}\" a été ajouté à votre calendrier local pour les rappels.",
+    "whatsapp_request_title": "Demande d'entrée à l'événement",
+    "whatsapp_rsvp_title": "RSVP pour {{title}}",
+    "person_s": "PERSONNE(S)",
+    "label_highlights": "Points forts",
+    "details": {
+      "not_found": "Événement non trouvé",
+      "go_back": "Retour",
+      "featured_artist": "Artiste en vedette",
+      "venue_label": "Lieu",
+      "nightlife_event": "ÉVÉNEMENT NOCTURNE",
+      "headlining": "EN VEDETTE"
+    }
+  },
+  "cart": {
+    "title": "Panier",
+    "clear_all": "Tout effacer",
+    "empty_cart": "Votre panier est vide",
+    "empty_cart_subtitle": "Il semble que vous n'ayez pas encore ajouté de délices premium.",
+    "explore_menu": "Explorer le menu",
+    "browse_menu": "PARCOURIR LE MENU",
+    "order_summary": "Résumé de la commande",
+    "subtotal": "Sous-total",
+    "delivery_fee": "Frais de livraison",
+    "total": "Total",
+    "bill_summary": "Résumé de la facture",
+    "item_total": "Total des articles",
+    "gst": "TVA (18%)",
+    "total_payable": "Total à payer",
+    "order_sent": "COMMANDE ENVOYÉE !",
+    "order_sent_subtitle": "Nous vous redirigeons vers WhatsApp pour finaliser votre commande.",
+    "proceed_whatsapp": "PASSER À WHATSAPP",
+    "checkout_whatsapp": "VÉRIFIER VIA WHATSAPP",
+    "delivery": "À emporter",
+    "dine_in": "Sur place",
+    "auth": {
+      "get_started": "Commencer",
+      "verify": "Vérifier",
+      "personalize": "Personnaliser la commande",
+      "phone_title": "Identifiez-vous",
+      "phone_subtitle": "Entrez votre numéro pour continuer",
+      "phone_placeholder": "Numéro de mobile",
+      "send_otp": "ENVOYER L'OTP",
+      "otp_title": "Vérification",
+      "otp_subtitle": "Entrez le code à 4 chiffres envoyé (Démo: 1234)",
+      "verify_otp": "VÉRIFIER L'OTP",
+      "details_title": "Détails finaux",
+      "details_subtitle": "Encore quelques choses",
+      "know_you_better": "Nous aimerions mieux vous connaître",
+      "your_name_label": "VOTRE NOM",
+      "name_placeholder": "ex. Jean Dupont",
+      "order_type_label": "TYPE DE COMMANDE",
+      "address_label": "NOTE DE RÉCUPÉRATION (OPTIONNEL)",
+      "address_placeholder": "ex. Prêt dans 15 minutes",
+      "guests_label": "NOMBRE D'INVITÉS",
+      "guests_placeholder": "ex. 2",
+      "continue_preview": "CONTINUER VERS L'APERÇU",
+      "complete": "S'INSCRIRE",
+      "invalid_otp": "Code invalide. Utilisez 1234"
+    },
+    "preview": {
+      "skyline_title": "Delhi Darbar",
+      "concierge": "Conciergerie Premium",
+      "order_request": "Demande de commande",
+      "type": "Type",
+      "addr": "Récupération",
+      "guests": "Invités",
+      "payable": "À payer",
+      "just_now": "À l'instant",
+      "send_button": "ENVOYER LA COMMANDE À WHATSAPP"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "not_identified": "Explorateur Invité",
+    "identify_prompt": "Identifiez-vous pour sauvegarder",
+    "logout": "Déconnexion",
+    "reserve_table": "Réserver une table",
+    "reserve_subtitle": "Évitez la file et assurez votre place",
+    "choose_date": "CHOISIR LA DATE",
+    "choose_time": "CHOISIR L'HEURE",
+    "num_guests": "NOMBRE D'INVITÉS",
+    "special_requests": "DEMANDES SPÉCIALES (OPTIONNEL)",
+    "request_placeholder": "Anniversaire, fête ou notes diététiques...",
+    "book_button": "RÉSERVER LA TABLE",
+    "booking_history": "Commandes précédentes",
+    "booking_history_subtitle": "Voir l'historique et commander à nouveau",
+    "notifications": "Paramètres de notification",
+    "notifications_subtitle": "Gérer les offres et mises à jour",
+    "support": "Aide et assistance",
+    "support_subtitle": "FAQ et contact conciergerie",
+    "switch_experience": "Changer d'Expérience",
+    "switch_experience_subtitle": "Skyline · Spice and Bliss",
+    "account_support_header": "COMPTE ET ASSISTANCE",
+    "past_orders": "Commandes Passées",
+    "no_orders_title": "Pas encore de commandes",
+    "no_orders_subtitle": "Votre voyage culinaire commence avec votre première commande.",
+    "browse_menu": "Parcourir le menu",
+    "reservations_header": "MES RÉSERVATIONS",
+    "no_reservations_title": "Pas encore de réservations",
+    "no_reservations_subtitle": "Votre table préférée n'attend plus que d'être réservée.",
+    "book_now": "Réserver Maintenant",
+    "status_confirmed": "Confirmé",
+    "status_completed": "Terminé",
+    "reorder_btn": "Re-commander",
+    "items_count": "{{count}} articles",
+    "type_dinein": "Sur place",
+    "type_takeaway": "À emporter",
+    "book_table_now": "Réserver une table",
+    "book_table_now_subtitle": "Assurez votre place pour la prochaine visite",
+    "booking_summary": "Résumé de la réservation",
+    "reorder_summary": "Résumé de la commande",
+    "items_to_reorder": "Réviser votre sélection",
+    "add_all_to_cart": "TOUT AJOUTER AU PANIER",
+    "reorder_success": "Succès! Articles ajoutés au panier",
+    "confirm_booking": "CONFIRMER VIA WHATSAPP",
+    "reservation_details": "Détails de la réservation",
+    "special_requests_label": "Demandes spéciales",
+    "no_requests": "Aucune demande spéciale mentionnée",
+    "modify_booking": "MODIFIER VIA WHATSAPP",
+    "cancel_booking": "ANNULER LA RÉSERVATION",
+    "status_pending": "En attente",
+    "status_confirmed_long": "Réservation confirmée",
+    "cancel_conf_title": "Annuler la réservation ?",
+    "cancel_conf_msg": "Êtes-vous sûr de vouloir annuler cette réservation ?",
+    "edit_selection": "Modifier la sélection",
+    "today": "Aujourd'hui",
+    "person": "Personne",
+    "people": "Personnes",
+    "label_date": "DATE",
+    "label_time_slot": "CRÉNEAU",
+    "label_total_guests": "TOTAL INVITÉS",
+    "label_your_note": "VOTRE NOTE",
+    "days": {
+      "sun": "Dim",
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Jeu",
+      "fri": "Ven",
+      "sat": "Sam"
+    },
+    "scanner": {
+      "title": "Scanner le QR",
+      "instruction": "Positionnez le code QR dans le cadre pour voir le menu",
+      "flash_on": "Flash Activé",
+      "flash_off": "Flash Désactivé",
+      "table_title": "TABLE",
+      "welcome_msg": "Bienvenue à Skyline !",
+      "start_ordering": "COMMENCER LA COMMANDE"
+    }
+  },
+  "booking": {
+    "title": "Finaliser la Réservation",
+    "subtitle": "Sécurisez votre place chez Skyline",
+    "select_date": "Choisir la Date",
+    "select_guests": "Nombre d'Invités",
+    "select_time": "Choisir l'Heure",
+    "choose_vibe": "Choisir l'Atmosphère",
+    "perfect_for": {
+      "romantic": "Parfait pour un Rendez-vous Romantique",
+      "party": "Parfait pour un Dîner Festif",
+      "group": "Parfait pour un Festin de Groupe",
+      "casual": "Parfait pour une Soirée Décontractée"
+    },
+    "slots": {
+      "dinner": "Heures de pointe du dîner",
+      "limited": "Dernières places"
+    },
+    "confirm": "CONFIRMER LA RÉSERVATION",
+    "verify_title": "Vérification Rapide",
+    "verify_subtitle": "Recevez un code OTP pour finaliser",
+    "whatsapp_preview": "Aperçu WhatsApp",
+    "whatsapp_msg": "Bonjour Skyline, je souhaite réserver une table pour {{guests}} personnes le {{date}} à {{time}} dans la section {{seating}}."
+  },
+  "ambience": {
+    "title": "Placement & Ambiance",
+    "subtitle": "Sélectionnez votre atmosphère pour la soirée",
+    "sections": {
+      "rooftop": {
+        "name": "Rooftop Sky-Lounge",
+        "description": "Vue imprenable sur la ville avec une brise fraîche et un éclairage tamisé.",
+        "vibe": "Romantique & Panoramique"
+      },
+      "lounge": {
+        "name": "Le Social Lounge",
+        "description": "Espace social dynamique avec des canapés moelleux et des rythmes deep house.",
+        "vibe": "Énergique & Social"
+      },
+      "bar": {
+        "name": "Côté Mixologie",
+        "description": "Au cœur de l'action, au plus près de nos maîtres mixologues.",
+        "vibe": "Décontracté & Proche"
+      },
+      "vip": {
+        "name": "Carré VIP Royal",
+        "description": "Luxe discret pour des conversations privées et un service exclusif.",
+        "vibe": "Privé & Élite"
+      }
+    },
+    "status": {
+      "available": "Disponible",
+      "limited": "Places Limitées",
+      "full": "Complet"
+    },
+    "reserve_vibe": "RÉSERVER CETTE AMBIANCE"
+  },
+  "fulfillment": {
+    "header_label": "SKYLINE",
+    "heading": "Comment souhaitez-vous\ncommander ?",
+    "subheading": "Choisissez votre expérience de restauration",
+    "recommended": "RECOMMANDÉ",
+    "dine_in": "Sur Place",
+    "dine_in_desc": "Scannez le QR à votre table pour commander instantanément",
+    "takeaway": "À Emporter",
+    "takeaway_desc": "Parcourez notre menu et récupérez votre commande",
+    "instant": "Instantané",
+    "qr_scan": "Scanner QR",
+    "table_service": "Service Table",
+    "or": "OU",
+    "footer": "DELHI DARBAR GROUP",
+    "current_mode": "Mode de commande",
+    "change": "Changer"
+  }
+}

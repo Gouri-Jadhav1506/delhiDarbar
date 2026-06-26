@@ -1,53 +1,79 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import { Platform } from 'react-native';
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    background: '#042D31', // Maintaining Dark Theme for Premium Look
+    surface: '#053B40',
+    primary: '#FEA116',
+    secondary: '#FEA42B',
+    text: '#FFFFFF',
+    textSecondary: 'rgba(255, 255, 255, 0.6)',
+    border: 'rgba(254, 161, 22, 0.15)',
+    glass: 'rgba(255, 255, 255, 0.05)',
+    accent: '#FEA116',
+    whatsapp: '#FEA116',
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    background: '#042D31',
+    surface: '#053B40',
+    primary: '#FEA116',
+    secondary: '#FEA42B',
+    text: '#FFFFFF',
+    textSecondary: 'rgba(255, 255, 255, 0.6)',
+    border: 'rgba(254, 161, 22, 0.15)',
+    glass: 'rgba(255, 255, 255, 0.05)',
+    accent: '#FEA116',
+    whatsapp: '#FEA116',
   },
+  // Flattened for backward compatibility in existing components
+  background: '#042D31',
+  surface: '#053B40',
+  primary: '#FEA116',
+  secondary: '#FEA42B',
+  text: '#FFFFFF',
+  textSecondary: 'rgba(255, 255, 255, 0.6)',
+  border: 'rgba(254, 161, 22, 0.15)',
+  glass: 'rgba(255, 255, 255, 0.05)',
+  accent: '#FEA116',
+  whatsapp: '#FEA116',
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+export const Fonts = {
+  regular: 'System',
+  medium: 'System',
+  bold: 'System',
+  semiBold: 'System',
+  black: 'System',
+  rounded: 'System',
+  mono: 'System',
+};
+
+export const Typography = {
+  h1: {
+    fontSize: 32,
+    fontWeight: '800' as const,
+    letterSpacing: 0.5,
+    color: Colors.text,
   },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
+  h2: {
+    fontSize: 24,
+    fontWeight: '700' as const,
+    color: Colors.text,
   },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+  h3: {
+    fontSize: 20,
+    fontWeight: '600' as const,
+    color: Colors.primary,
   },
-});
+  body: {
+    fontSize: 16,
+    color: Colors.textSecondary,
+  },
+  bodyBold: {
+    fontSize: 16,
+    fontWeight: '600' as const,
+    color: Colors.text,
+  },
+  caption: {
+    fontSize: 12,
+    color: Colors.textSecondary,
+  },
+};

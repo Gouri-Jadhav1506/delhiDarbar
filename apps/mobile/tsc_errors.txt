@@ -1,0 +1,12 @@
+app/(tabs)/explore.tsx(10,10): error TS2305: Module '"@/constants/theme"' has no exported member 'Fonts'.
+app/(tabs)/reservation/index.tsx(95,44): error TS2345: Argument of type '`/(tabs)/reservation/${string}`' is not assignable to parameter of type '"/splash" | RelativePathString | ExternalPathString | "/" | `/?${string}` | `/#${string}` | "/language-selection" | `/language-selection?${string}` | `/language-selection#${string}` | "/modal" | ... 188 more ... | { ...; }'.
+app/ecommerce/login.tsx(26,13): error TS2554: Expected 2 arguments, but got 1.
+app/menu-detail/[id].tsx(28,25): error TS2307: Cannot find module '@/context/CartContext' or its corresponding type declarations.
+app/menu-detail/[id].tsx(134,10): error TS2304: Cannot find name 'SafeAreaView'.
+app/menu-detail/[id].tsx(155,11): error TS2304: Cannot find name 'SafeAreaView'.
+components/ui/collapsible.tsx(24,45): error TS2339: Property 'light' does not exist on type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.
+components/ui/collapsible.tsx(24,65): error TS2339: Property 'dark' does not exist on type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.
+hooks/use-theme-color.ts(11,34): error TS2339: Property 'light' does not exist on type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.
+hooks/use-theme-color.ts(11,62): error TS2339: Property 'dark' does not exist on type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.
+hooks/use-theme-color.ts(19,12): error TS7053: Element implicitly has an 'any' type because expression of type '"light" | "dark"' can't be used to index type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.
+  Property 'light' does not exist on type '{ background: string; surface: string; primary: string; secondary: string; text: string; textSecondary: string; border: string; glass: string; accent: string; whatsapp: string; }'.

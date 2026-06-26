@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import ImageCropModal from "./ImageCropModal";
 import Link from "next/link";
 import Image from "next/image";
 import { useCart, Product, Order, Subscriber } from "../context/CartContext";
@@ -56,6 +57,32 @@ export default function AdminPage() {
     details: [""]
   });
   const [detailInput, setDetailInput] = useState("");
+
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [cropModalOpen, setCropModalOpen] = useState(false);
+  const [uploadImageSrc, setUploadImageSrc] = useState<string | null>(null);
+  const [uploadFileType, setUploadFileType] = useState<string>("image/jpeg");
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadFileType(file.type);
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === "string") {
+        setUploadImageSrc(reader.result);
+        setCropModalOpen(true);
+      }
+    };
+    reader.readAsDataURL(file);
+    e.target.value = "";
+  };
+
+  const handleCropComplete = (croppedBase64: string) => {
+    setProductForm((prev) => ({ ...prev, image: croppedBase64 }));
+  };
 
   // Orders State
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
@@ -772,21 +799,39 @@ export default function AdminPage() {
                     <option value="Accessories">Accessories</option>
                   </select>
                 </div>
-                <div className="space-y-1">
-                  <label className="font-jost text-xs text-white/60">Image Selection</label>
-                  <select
-                    value={productForm.image}
-                    onChange={(e) => setProductForm(prev => ({ ...prev, image: e.target.value }))}
-                    className="w-full rounded-xl border border-white/10 bg-[#1B3030] px-4 py-2.5 text-xs text-white focus:outline-none focus:border-[#FFD84D]"
-                  >
-                    <option value="/assets/images/spicenbliss/bracelet_1.jpg">Elysian Amber (Bracelet)</option>
-                    <option value="/assets/images/spicenbliss/earrings_1.png">Ethnic Pink Stone Oxidized (Earrings)</option>
-                    <option value="/assets/images/spicenbliss/cuff_1.jpg">Solaris Aura (Cuff)</option>
-                    <option value="/assets/images/spicenbliss/earrings_2.jpg">Celestial Moonstone (Earrings)</option>
-                    <option value="/assets/images/spicenbliss/anklet_1.jpg">Zanzibar Spice (Anklet)</option>
-                    <option value="/assets/images/spicenbliss/choker_1.jpg">Harmony Choker (Pearl)</option>
-                    <option value="/assets/images/spicenbliss/ring_1.png">Oxidized Statement Ring (Ring)</option>
-                  </select>
+                <div className="space-y-1 col-span-2 sm:col-span-1">
+                  <label className="font-jost text-xs text-white/60 block">Product Image</label>
+                  <div className="flex items-center gap-3">
+                    <div className="relative h-[38px] w-[38px] overflow-hidden rounded-xl border border-white/10 bg-[#1B3030]/40 flex-shrink-0">
+                      {productForm.image ? (
+                        <Image
+                          src={productForm.image}
+                          alt="Product preview"
+                          fill
+                          className="object-cover"
+                          sizes="38px"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-white/20 text-[9px]">
+                          No image
+                        </div>
+                      )}
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="flex-1 rounded-xl border border-white/10 hover:border-[#FFD84D]/50 hover:bg-white/5 text-white py-2.5 text-[10px] uppercase font-bold tracking-wider transition-colors flex items-center justify-center gap-1.5 h-[38px]"
+                    >
+                      <FaPlus className="w-2.5 h-2.5" /> Upload Image
+                    </button>
+                  </div>
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleFileChange}
+                    accept="image/*"
+                    className="hidden"
+                  />
                 </div>
               </div>
 
@@ -954,6 +999,14 @@ export default function AdminPage() {
           </div>
         </div>
       )}
+
+      <ImageCropModal
+        isOpen={cropModalOpen}
+        imageSrc={uploadImageSrc}
+        fileType={uploadFileType}
+        onClose={() => setCropModalOpen(false)}
+        onCrop={handleCropComplete}
+      />
     </div>
   );
 }

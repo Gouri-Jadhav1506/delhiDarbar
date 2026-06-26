@@ -214,7 +214,7 @@ function ShopContent() {
                       onClick={() => addToCart(product)}
                       className="w-full rounded-full bg-white/5 hover:bg-[#FFD84D] border border-white/10 hover:border-[#FFD84D] hover:text-[#102B2A] text-white px-5 py-2 text-xs font-semibold font-jost uppercase tracking-wider transition-all duration-300"
                     >
-                      Add to Quote
+                      Get Quote
                     </button>
                   </div>
                 </div>

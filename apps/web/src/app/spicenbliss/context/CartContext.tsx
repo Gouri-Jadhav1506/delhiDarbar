@@ -82,26 +82,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (savedProducts) {
       try {
         const parsed = JSON.parse(savedProducts) as Product[];
-        const synced = parsed.map(savedP => {
-          const defaultP = products.find(p => p.id === savedP.id);
-          if (defaultP) {
-            if (
-              savedP.name !== defaultP.name ||
-              savedP.image !== defaultP.image ||
-              savedP.desc !== defaultP.desc
-            ) {
-              return {
-                ...savedP,
-                name: defaultP.name,
-                image: defaultP.image,
-                desc: defaultP.desc,
-                materials: defaultP.materials,
-                details: defaultP.details
-              };
-            }
-          }
-          return savedP;
-        });
+        const synced = parsed;
 
         // Add any missing default products
         products.forEach(defaultP => {

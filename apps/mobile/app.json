@@ -1,21 +1,19 @@
 {
   "expo": {
-    "name": "Delhi Darbar",
-    "slug": "delhidarbar",
+    "name": "e-commerce",
+    "slug": "e-commerce",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "delhidarbar",
+    "scheme": "ecommerce",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.delhidarbar.app"
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.delhidarbar.app",
       "adaptiveIcon": {
-        "backgroundColor": "#102B2A",
+        "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -35,12 +33,13 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#102B2A",
+          "backgroundColor": "#ffffff",
           "dark": {
-            "backgroundColor": "#0D2221"
+            "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
